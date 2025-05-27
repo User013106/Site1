@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - EMSYS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .login-container {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background: white;
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 8px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .banner {
+      background: url('https://via.placeholder.com/700x100?text=EMSYS+ERP.ANYTIME.ANYWHERE') no-repeat center;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner"></div>
+
+  <div class="login-container">
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="User">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const correctUser = "MirianaB";
+      const correctPass = "parola1";
+
+      if (user === correctUser && pass === correctPass) {
+        window.location.href = "grades.html";
+      } else {
+        document.getElementById("error").textContent = "Wrong account or password";
+      }
+    }
+  </script>
+
+</body>
+</html>
